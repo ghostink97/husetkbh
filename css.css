@@ -1,0 +1,14 @@
+/******************** This is for the code**********************/
+.inactive{
+    display:none;
+}
+
+.touch{
+    cursor: pointer;
+}
+
+/******************** This is a placeholder**********************/
+img{
+    width:100%;
+    max-height: 25%;
+}

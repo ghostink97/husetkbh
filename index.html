@@ -1,1 +1,58 @@
-yep
+<!doctype html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="HusetEvents">
+        <link rel="stylesheet" href="css.css" type="text/css">
+        <link rel="icon" href="#" type="image/x-icon">
+        <title>HusetKBH Events</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+        <body>
+            <header>
+                <picture id="logo">
+                        <img src="images/Huset_logo_9_B.png" alt="logo">
+                </picture>
+            </header>
+            <main>
+                <section id="eventItems">
+                </section>
+                <footer>
+                    <div id="contact">
+                        <h3>Contact</h3>
+                        <h4>Huset-KBH</h4>
+                        <h5>Rådhusstræde 13</h5>
+                        <h5>1466 København K</h5>
+                        <h5>Tlf: 21 51 21 51</h5>
+                        <h5>info@huset-kbh.dk</h5>
+                    </div>
+                    <div id="sponsors">
+                        <img src="#" alt="sponsor 1" id="spons1">
+                        <img src="#" alt="sponsor 2" id="spons2">
+                    </div>
+                </footer>
+            </main>
+            <template id="template">
+                <article id="event">
+                    <img src="" alt="eventPic" id="eventPic">
+                    <h2 id="title">Title</h2>
+                    <h3 id="timePlace">Time and Place</h3>
+                    <a href="#" id="socialMedia">Twitter, Facebook</a>
+                    <h2 id="price">price</h2>
+                    <img src="images/arrowdown.png" alt="arrowdown" id="moreinf" class="touch">
+                </article>
+            </template>
+            <article class="modal inactive">
+                <img src="" alt="eventPic2" id="eventPic">
+                <h2 id="title2">Title</h2>
+                <h3 id="timePlace2">Time and Place</h3>
+                <h2 id="price2">price</h2>
+                <p id="longDesc">long descriptopm</p>
+                <a href="#" id="socialMedia2">Twitter, Facebook, more?</a>
+                <a href="#" id="tickets">Tickets</a>
+                <img src="images/arrowup.png" alt="arrow-up" id="lessinf" class="touch">
+            </article>
+        <script src="js.js"></script>
+    </body>
+</html>
