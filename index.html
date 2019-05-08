@@ -7,18 +7,24 @@
         <link rel="stylesheet" href="css.css" type="text/css">
         <link rel="icon" href="#" type="image/x-icon">
         <title>HusetKBH Events</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
         <body>
             <header>
                 <picture id="logo">
                         <img src="images/Huset_logo_9_B.png" alt="logo">
                 </picture>
+                <h1 class="weird">EVENTS</h1>
             </header>
-            <main>
-                <section id="eventItems">
-                </section>
-                <footer>
+            <main id="details-main">
+                <template>
+                    <article class="post">
+                        <img src="" alt="" class="imgs">
+                        <h2 class="bname">TITLE GOES HERE</h1>
+                        <p class="datetime"></p>
+                        <a href="" class="detail-btn">Read More</a>                
+                    </article>
+                </template>
+               <!-- <footer>
                     <div id="contact">
                         <h3>Contact</h3>
                         <h4>Huset-KBH</h4>
@@ -31,28 +37,8 @@
                         <img src="images/kommmuneLogo.png" alt="sponsor 1" id="spons1">
                         <img src="images/huset_spons_logo.png" alt="sponsor 2" id="spons2">
                     </div>
-                </footer>
+                </footer>-->
             </main>
-            <template id="template">
-                <article id="event">
-                    <img src="" alt="eventPic" id="eventPic">
-                    <h2 id="title">Title</h2>
-                    <h3 id="timePlace">Time and Place</h3>
-                    <a href="#" id="socialMedia">Twitter, Facebook</a>
-                    <h2 id="price">price</h2>
-                    <img id="moreInf" src="images/arrowdown.png" alt="arrowdown" class="touch">
-                </article>
-            </template>
-            <article class="modal inactive">
-                <img src="#" alt="eventPic" id="eventPic2">
-                <h2 id="title2">Title</h2>
-                <h3 id="timePlace2">Time and Place</h3>
-                <h2 id="price2">price</h2>
-                <p id="longDesc">long descriptopm</p>
-                <a href="#" id="socialMedia2">Twitter, Facebook, more?</a>
-                <a href="#" id="tickets">Tickets</a>
-                <img src="images/arrowup.png" alt="arrow-up" id="lessinf" class="touch">
-            </article>
         <script src="js.js"></script>
     </body>
 </html>

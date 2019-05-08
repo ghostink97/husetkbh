@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" cintent="width=device-width, initial-scale=1.0">
+        <title>event details</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <header>
+            <picture id="logo">
+                    <img src="images/Huset_logo_9_B.png" alt="logo">
+            </picture>
+            <h1 class="weird">EVENTS</h1>
+        </header>
+        <nav>
+            <a href="index.html">Return</a>
+        </nav>
+        <main id="details-main">
+           <article class="post">
+                 <img src="" alt="" class="imgs">
+                <h2 class="bname">TITLE GOES HERE</h1>
+                <h3 class="datetime"></h3>
+               <h4 class="genre"></h4>
+               <p class="longdesc"></p>
+               <h3 class="price"></h3>   
+                <h5 class="contact"></h5>
+                <a href="" class="tickets">Tickets</a>
+                <p class="spotify"></p>
+           </article>
+        </main>
+        <script>
+            const baseLink = "http://angelezrameyer.com/huset/wp-json/wp/v2/events/";
+            const URLprms = new URLSearchParams(window.location.search);
+            const eventID = URLprms.get("id")
+            console.log(baseLink + eventID + "?_embed");
+        
+            fetch(baseLink + eventID + "?_embed").then(e => e.json()).then(showCar);
+        
+            function showCar(item) {
+                console.log(item);
+                document.querySelector(".bname").textContent = item.titleof;
+                document.querySelector(".datetime").textContent = item.dateof + " at " + item.venue;
+                document.querySelector(".imgs").src = item.image.guid;
+                document.querySelector(".genre").textContent = item.genre;
+                document.querySelector(".longdesc").textContent = item.longdesc;
+                document.querySelector(".price").textContent = "pris: " + item.price;
+                document.querySelector(".tickets").href = item.tickets;
+                document.querySelector(".contact").textContent = "Ring til os på tlf: "+item.contact;
+                document.querySelector(".spotify").innerHTML = item.spotify;
+
+                if (!item.price=="0.00"){
+                    document.querySelector(".price").textContent = "FREE";
+                }
+
+                }
+        </script>
+    </body>
+</html>
